@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>Parallax Hero Image | CodyHouse</title>
+</head>
+<body>
+	<script src="js/jquery-2.1.1.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script type="text/javascript">
+$(document).ready(function(){
+
+   function showIDs(id){
+	$('body').scrollTo('#abajo'); 
+	 console.log("HOla");
+ 
+	}
+
+}); 
+ function showID(id){
+	showIDs();
+ 
+	}
+</script>
+	<div class="cd-background-wrapper">
+		<figure class="cd-floating-background">
+			<img  src="img2/bg.png" alt="image-1">
+			<img src="img2/figura2.png" alt="image-2">
+			<img onclick='showID(this)' id="sect1" src="img2/foto2.png" alt="image-3">
+            <img onclick='showID(this)' id="sect2" src="img2/video2.png" alt="image-4">
+            <img onclick='showID(this)' id="sect3" src="img2/mograph2.png" alt="image-5">
+            <img onclick='showID(this)' id="sect4" src="img2/design2.png" alt="image-6">
+
+		</figure>
+	</div>
+    <div id="contenido"class="contenido">
+    	<a href="#" id="abajo">Contenido</a>
+    </div>
+
+</body>
+</html>

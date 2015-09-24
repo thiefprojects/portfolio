@@ -1,0 +1,158 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  color: #ffffff;
+  background: #001426 url("../img/bg-pattern.png");
+  overflow: hidden;
+}
+
+a {
+  color: #196a74;
+  text-decoration: none;
+}
+
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+.cd-background-wrapper {
+  background-color: #001426;
+  position: relative;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.no-touch .cd-background-wrapper {
+  -webkit-perspective: 4000px;
+  -moz-perspective: 4000px;
+  perspective: 4000px;
+}
+.cd-background-wrapper::before {
+  /* never visible - this is used in jQuery to check the device type */
+  content: 'web';
+  display: none;
+}
+.touch .cd-background-wrapper::before {
+  /* never visible - this is used in jQuery to check the device type */
+  content: 'mobile';
+}
+
+.cd-floating-background {
+  position: relative;
+}
+.cd-floating-background img {
+  display: block;
+  width: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* fixes a Firefox bug - images not correctly rendered*/
+  background-color: rgba(255, 255, 255);
+}
+.cd-floating-background img:not(:first-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.no-touch .cd-floating-background {
+  top: 0;
+  left: 0;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.no-touch .cd-floating-background.is-absolute {
+  position: absolute;
+  
+}
+
+.no-touch .cd-floating-background img:first-child {
+	height: 100%;
+  min-width: 100%;
+  -webkit-transform: translateZ(50px);
+  -moz-transform: translateZ(50px);
+  -ms-transform: translateZ(50px);
+  -o-transform: translateZ(50px);
+  transform: translateZ(50px);
+}
+.no-touch .cd-floating-background img:nth-child(2) {
+  position:fixed;
+   
+  left:50%;
+  margin-left: -335px;
+  margin-top: 360px;
+
+  -webkit-transform: translateZ(290px);
+  -moz-transform: translateZ(290px);
+  -ms-transform: translateZ(290px);
+  -o-transform: translateZ(290px);
+  transform: translateZ(290px);
+}
+.no-touch .cd-floating-background  img:nth-child(3) {
+	margin-top:450px;
+	margin-left:33%;
+  -webkit-transform: translateZ(350px);
+  -moz-transform: translateZ(350px);
+  -ms-transform: translateZ(350px);
+  -o-transform: translateZ(350px);
+  transform: translateZ(350px);
+}
+.no-touch .cd-floating-background img:nth-child(4) {
+	margin-top:500px;
+	margin-left:53%;
+  -webkit-transform: translateZ(150px);
+  -moz-transform: translateZ(150px);
+  -ms-transform: translateZ(150px);
+  -o-transform: translateZ(150px);
+  transform: translateZ(150px);
+}
+.no-touch .cd-floating-background img:nth-child(5) {
+	margin-top:800px;
+	margin-left:50%;
+  -webkit-transform: translateZ(500px);
+  -moz-transform: translateZ(500px);
+  -ms-transform: translateZ(500px);
+  -o-transform: translateZ(500px);
+  transform: translateZ(500px);
+}
+.no-touch .cd-floating-background img:nth-child(6) {
+	margin-top:760px;
+	margin-left:25%;
+  -webkit-transform: translateZ(200px);
+  -moz-transform: translateZ(200px);
+  -ms-transform: translateZ(200px);
+  -o-transform: translateZ(200px);
+  transform: translateZ(200px);
+}
+.no-touch.no-preserve-3d .cd-floating-background {
+  /* we target browsers that don't support preserve-3d and show just a standard image - no effect visible */
+  position: relative;
+}
+
+.contenido{
+	background-color:#093;
+	width:100%;
+	height:1500px;
+}
